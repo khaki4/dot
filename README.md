@@ -1,2 +1,3 @@
-# dot
-limit number of string
+# Dotify
+
+default limitNum : 20
