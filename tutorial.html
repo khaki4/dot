@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="ex1">
+        <li class="ee">sdfsdfjlsdkfjlsdkfjlsdfjksldfjksdf</li>
+        <li class="dotify">sed3fsdfsdfsdfsdfsdf</li>
+        <li class="">efefefeffefeeffefeef</li>
+    </ul>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+
+    (function (window, $) {
+        "use strict";
+
+        $.fn.dotify = function (limitNum) {
+
+            var select = $(this),
+                strLen = select.length,
+                addStr = "...";
+
+            select.each(function (idx, value) {
+                var txt = $(this).text().slice(0, limitNum) + addStr;
+                $(this).text(txt);
+            });
+        };
+    }(window, jQuery));
+
+    // $(selector).dotify(limit number of string);
+    $(".ee").dotify(7);
+    </script>
+</body>
+</html>
